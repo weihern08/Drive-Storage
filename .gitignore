@@ -1,0 +1,19 @@
+# Local configuration and secrets
+config/database.php
+config/installed.lock
+.env
+
+# Uploaded user files and runtime data
+storage/vault/*
+!storage/vault/index.html
+storage/versions/*
+!storage/versions/index.html
+storage/temp/*
+!storage/temp/index.html
+
+# Editors / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db

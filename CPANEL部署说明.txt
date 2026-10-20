@@ -1,0 +1,34 @@
+Vaultora — cPanel 部署（不用安装向导）
+====================================
+
+1) 上传并解压网站文件（ZIP）到 public_html 或子目录
+
+2) 在 cPanel → phpMyAdmin：
+   - 选择数据库：synergy1_weihern_Drive_Storage
+   - 点 Import / 导入
+   - 选择文件：database/cpanel_ready.sql
+   - 执行一次即可
+
+3) 确认 config/database.php 已是：
+   host: localhost
+   name: synergy1_weihern_Drive_Storage
+   user: synergy1_shaoxi
+   pass: （你的数据库密码）
+
+4) 确认存在文件：config/installed.lock
+   （ZIP 里已包含，不要删）
+
+5) 确认 storage 文件夹可写（权限 755 或 775）
+   - 在 File Manager 右键 storage → Change Permissions → 755 或 775
+   - 勾选 Recurse / 应用到子文件夹
+   - 或打开一次：/fix_storage.php 然后删除该文件
+
+6) 直接打开登录页（不要再开 /install/）：
+   用户：  /login.php
+   管理：  /admin/login.php
+
+账号：
+   Admin  gmail: admin@gmail.com   password: Admin123!
+   User   gmail: user@gmail.com    password: User123!
+
+完成。不需要再跑安装向导。
